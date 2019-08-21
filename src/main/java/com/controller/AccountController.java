@@ -30,13 +30,14 @@ public class AccountController extends HttpServlet {
             // 用户注册成功
             // 弹框提示，返回登陆界面
             writer.println("<script>\n" +
-                    "    alert(\"注册成功\");\n" +
+                    "        alert(\"注册成功，请登录!\");\n" +
+
                     "    window.location.href = \"/index.html\";\n" +
                     "</script>");
         }else {
             // 弹框提示失败，保留原页面
             writer.println("<script>\n" +
-                    "    alert(\"注册失败\");\n" +
+                    "        alert(\"注册失败\");\n" +
                     "    window.location.href = \"/registration.html\";\n" +
                     "</script>");
         }

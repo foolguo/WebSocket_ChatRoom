@@ -34,16 +34,19 @@ public class CommUtils {
         }
         return properties;
     }
-
-    public static String object2Json(Object obj) {
+    public static String objectToJson(Object obj) {
         return gson.toJson(obj);
     }
 
-    public static Object json2Object(String jsonStr,Class objClass) {
+    public static Object jsonToObject(String jsonStr,Class objClass) {
         return gson.fromJson(jsonStr,objClass);
     }
 
     public static boolean strIsNull(String str) {
         return str == null || str.equals("");
     }
+
+
+
 }
+

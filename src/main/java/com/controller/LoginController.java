@@ -35,7 +35,8 @@ public class LoginController extends HttpServlet {
         if (CommUtils.strIsNull(userName) || CommUtils.strIsNull(password)) {
             // 登录失败,停留登录页面
             out.println("    <script>\n" +
-                    "        alert(\"用户名或密码为空!\");\n" +
+                    "        alert(\"登录成功!\");\n" +
+
                     "        window.location.href = \"/index.html\";\n" +
                     "    </script>");
         }

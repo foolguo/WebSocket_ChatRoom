@@ -2,6 +2,7 @@ package com.dao;
 
 
 import com.entity.User;
+import org.apache.commons.codec.cli.Digest;
 import org.apache.commons.codec.digest.DigestUtils;
 
 import java.sql.*;
@@ -25,7 +26,8 @@ public class AccountDao extends BaseDao{
                     " password = ?";
             statement = connection.prepareStatement(sql);
             statement.setString(1,userName);
-            statement.setString(2, DigestUtils.md5Hex(password));
+            String m=DigestUtils.md5Hex(password);
+            statement.setString(2,m);
             resultSet = statement.executeQuery();
             if (resultSet.next()) {
                 user = getUserInfo(resultSet);

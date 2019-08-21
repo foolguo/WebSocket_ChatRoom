@@ -15,7 +15,7 @@ import javax.servlet.annotation.WebListener;
  * @Description:
  */
 @WebListener
-public class FreeMarkerListener implements ServletContextListener {
+public class      FreeMarkerListener implements ServletContextListener {
     public static final String TEMPLATE_KEY = "_template_";
     @Override
     public void contextInitialized(ServletContextEvent sce) {
@@ -24,7 +24,7 @@ public class FreeMarkerListener implements ServletContextListener {
         // 配置加载ftl的路径
         try {
             cfg.setDirectoryForTemplateLoading(
-                    new File("/Users/liuyiming/Documents/IDEA_Project/java7_chatroom_websocket/src/main/webapp"));
+                    new File("D:\\JAVA\\Chat_Room\\src\\main\\webapp"));
         } catch (IOException e) {
             e.printStackTrace();
         }
