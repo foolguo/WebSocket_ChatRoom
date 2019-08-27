@@ -35,7 +35,6 @@ public class WebSocket {
     private Session session;
     // 当前客户端的用户名
     private String userName;
-
     @OnOpen
     public void onOpen(Session session) {
         this.session = session;

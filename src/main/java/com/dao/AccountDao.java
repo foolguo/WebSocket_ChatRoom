@@ -6,6 +6,7 @@ import org.apache.commons.codec.cli.Digest;
 import org.apache.commons.codec.digest.DigestUtils;
 
 import java.sql.*;
+import java.util.HashMap;
 
 /**
  * @Author: yuisama
@@ -63,6 +64,7 @@ public class AccountDao extends BaseDao{
             closeResources(connection,statement);
         }
         return isSuccess;
+
     }
 
     // 将数据表信息封装到User类中
